@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  hello: "hi"
+kind: ConfigMap
+metadata:
+  name: cm-root
+  namespace: default
+  labels:
+    root: yes
