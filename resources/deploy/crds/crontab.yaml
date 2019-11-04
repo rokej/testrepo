@@ -26,7 +26,6 @@ spec:
     # shortNames allow shorter string to match your resource on the CLI
     shortNames:
     - ct
-  preserveUnknownFields: false
   validation:
     openAPIV3Schema:
       type: object
