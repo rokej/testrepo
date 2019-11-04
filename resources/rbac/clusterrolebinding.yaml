@@ -4,6 +4,7 @@ metadata:
   name: test-cr-binding
 subjects:
 - kind: ServiceAccount
+  name: test-sa
   namespace: default
 roleRef:
   kind: ClusterRole
