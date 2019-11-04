@@ -4,7 +4,7 @@ data:
 kind: ConfigMap
 metadata:
   name: skip-cert-verify
-  namespace: default
+  namespace: subscription-test-namespace
   labels:
     environment: Dev
     city: Toronto

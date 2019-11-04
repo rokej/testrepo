@@ -4,4 +4,4 @@ data:
 kind: ConfigMap
 metadata:
   name: sub1-cm
-  namespace: default
+  namespace: subscription-test-namespace
