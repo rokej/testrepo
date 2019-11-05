@@ -1,0 +1,6 @@
+apiVersion: v1
+data:
+  city: "Toronto"
+kind: ConfigMap
+metadata:
+  name: deploy-cm
