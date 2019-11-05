@@ -1,0 +1,4 @@
+etc/*
+resources/etc2/*
+etc3/*
+!etc3/etc4/*
