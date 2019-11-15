@@ -5,5 +5,5 @@ kind: ConfigMap
 metadata:
   name: skip-cert-verify
   labels:
-    environment: Dev
-    city: Toronto
+    environment: test
+    city: newyork
