@@ -7,3 +7,12 @@ metadata:
   labels:
     environment: test
     city: newyork
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: test-secret-2
+type: Opaque
+data:
+  accesskey: YWRtaW4=
+  secretkey: YWRtaW4xMjM0
