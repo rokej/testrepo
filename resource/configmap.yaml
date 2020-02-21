@@ -1,9 +1,7 @@
 apiVersion: v1
-data:
-  hello: "hi"
 kind: ConfigMap
 metadata:
-  name: cm-root
+  name: test-configmap
   namespace: default
-  labels:
-    root: yes
+data:
+    path: resource
