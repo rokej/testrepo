@@ -4,4 +4,4 @@ metadata:
   name: test-configmap
   namespace: default
 data:
-    path: resource
+    path: This is branch1
