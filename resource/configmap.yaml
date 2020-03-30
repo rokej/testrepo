@@ -1,7 +1,47 @@
+---
+---
+---
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-configmap
+  name: test-configmap-1
   namespace: default
 data:
-    path: resource
+  path: resource
+---
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-2
+  namespace: default
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-3
+  namespace: default
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-4
+  namespace: default
+data:
+  path: resource
+---
+---
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-5
+  namespace: default
+data:
+  path: resource
+		
