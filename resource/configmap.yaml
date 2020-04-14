@@ -5,7 +5,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-configmap-111
+  name: test-configmap-2222
   namespace: default
 data:
   path: resource
