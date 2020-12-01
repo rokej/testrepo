@@ -1,0 +1,13 @@
+
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: third-level-sub
+  namespace: default
+  annotations:
+    apps.open-cluster-management.io/github-path: resource
+spec:
+  channel: default/mychannel
+  placement:
+    placementRef:
+      name: local-cluster
