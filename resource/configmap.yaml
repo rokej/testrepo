@@ -10,7 +10,7 @@ metadata:
   name: test-configmap-2222
   namespace: multins
 data:
-  path: resource
+  path: resource2222222
 ---
 ---
 apiVersion: v1
