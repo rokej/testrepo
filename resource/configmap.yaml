@@ -9,6 +9,10 @@ kind: ConfigMap
 metadata:
   name: test-configmap-2222
   namespace: multins
+  annotations:
+    test: "123"
+  labels:
+    test2: "abc"
 data:
   path: resource2222222
 ---
