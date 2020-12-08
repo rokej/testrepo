@@ -13,19 +13,19 @@ metadata:
   name: second-level-sub
   namespace: default
   annotations:
-    apps.open-cluster-management.io/github-path: thirdsub
+    apps.open-cluster-management.io/github-path: day2
 spec:
   channel: default/mychannel
   placement:
     placementRef:
-      name: local-cluster
+      name: dev-cluster
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: local-cluster
+  name: dev-cluster
   namespace: default
 spec:
   clusterSelector:
     matchLabels:
-      local-cluster: "true"
+      environment: "dev"
