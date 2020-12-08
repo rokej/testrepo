@@ -1,19 +1,7 @@
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
+apiVersion: config.openshift.io/v1
+kind: OAuth
 metadata:
-  name: test-cluster-object
-rules:
-- apiGroups:
-  - cluster.open-cluster-management.io
-  resourceNames:
-  - local-cluster
-  resources:
-  - managedclusters
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
+  name: cluster
+spec:
+  tokenConfig:
+    accessTokenMaxAgeSeconds: 172800
