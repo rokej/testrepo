@@ -1,6 +1,19 @@
-apiVersion: config.openshift.io/v1
-kind: OAuth
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
 metadata:
-  name: cluster
-spec:
-  test: "123"
+  name: test-cluster-object
+rules:
+- apiGroups:
+  - cluster.open-cluster-management.io
+  resourceNames:
+  - local-cluster
+  resources:
+  - managedclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
