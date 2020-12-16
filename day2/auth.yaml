@@ -3,5 +3,20 @@ kind: OAuth
 metadata:
   name: cluster
 spec:
-  tokenConfig:
-    accessTokenMaxAgeSeconds: 172800
+  identityProviders:
+    - mappingMethod: claim
+      name: SSO
+      openID:
+        claims:
+          email:
+            - email
+          name:
+            - name
+          preferredUsername:
+            - preferred_username
+        clientID: XXXXXXXXXXXXX
+        clientSecret:
+          name: openid-client-secret
+        extraScopes: []
+        issuer: 'https://caffeine.onelogin.com/oidc/2'
+      type: OpenID
