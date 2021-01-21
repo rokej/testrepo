@@ -23,7 +23,7 @@ metadata:
   name: test-configmap-2
   namespace: default
 data:
-  path: resource33
+  path: resource33dd
 ---
 apiVersion: v1
 kind: ConfigMap
