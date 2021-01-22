@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: multins
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-3333
+  namespace: multins
+  annotations:
+    test: "123"
+  labels:
+    test2: "abc"
+data:
+  path: resource2222222
