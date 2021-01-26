@@ -28,4 +28,4 @@ metadata:
 spec:
   clusterSelector:
     matchLabels:
-      environment: "dev"
+      local-cluster: "true"
