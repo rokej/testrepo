@@ -50,11 +50,3 @@ metadata:
   namespace: default
 data:
   path: resource
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: test-configmap-6
-  namespace: default
-data:
-  path: resource	
