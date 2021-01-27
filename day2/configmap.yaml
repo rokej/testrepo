@@ -6,6 +6,7 @@ metadata:
   namespace: test1
   annotations:
     test: "123"
+    apps.open-cluster-management.io/reconcile-option: "merge"
   labels:
     test2: "abc"
 data:
