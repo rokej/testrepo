@@ -1,12 +1,12 @@
 apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
-  name: service-now-nginx-demo
-  namespace: nginx-pre-test
+  annotations:
+    ian: test-a-v2
+  labels:
+    tower_job_id: "173"
+  name: prehook-test
+  namespace: ansible
 spec:
+  job_template_name: Demo Job Template
   tower_auth_secret: toweraccess
-  job_template_name: Service now App Update
-  extra_vars:
-    sn_severity: 3
-    sn_priority: 3
-    appName: pacman-ansible-demonstration
