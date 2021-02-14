@@ -14,6 +14,7 @@ metadata:
   namespace: default
   annotations:
     apps.open-cluster-management.io/github-path: day2
+    apps.open-cluster-management.io/reconcile-option: replace
 spec:
   channel: default/mychannel
   placement:
