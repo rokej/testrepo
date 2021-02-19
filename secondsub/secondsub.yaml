@@ -2,7 +2,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   name: mychannel
-  namespace: default
+  namespace: roke-test
 spec:
   type: Git
   pathname: https://github.com/rokej/testrepo.git
@@ -11,7 +11,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
   name: second-level-sub
-  namespace: default
+  namespace: roke-test
   annotations:
     apps.open-cluster-management.io/github-path: day2
 spec:
@@ -24,7 +24,7 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: dev-cluster
-  namespace: default
+  namespace: roke-test
 spec:
   clusterSelector:
     matchLabels:
