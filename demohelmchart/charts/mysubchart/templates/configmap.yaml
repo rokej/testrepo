@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-cfgmap2
 data:
-  dessert: {{ .Values.name }}
+  firstname: {{ .Values.name }}
