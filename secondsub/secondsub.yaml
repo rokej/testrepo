@@ -15,7 +15,7 @@ metadata:
   annotations:
     apps.open-cluster-management.io/github-path: day2
 spec:
-  channel: default/mychannel
+  channel: roke-test/mychannel
   placement:
     placementRef:
       name: dev-cluster
