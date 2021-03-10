@@ -8,7 +8,7 @@ metadata:
 ---
 apiVersion: v1
 data:
-  path: resourcedfdfdfdfd
+  path: resourcedfdfdfdfddddd
 kind: ConfigMap
 metadata:
   name: test-configmap
