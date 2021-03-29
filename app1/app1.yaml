@@ -3,6 +3,7 @@ kind: Namespace
 metadata:
   name: multins
 ---
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: sub1-configmap
