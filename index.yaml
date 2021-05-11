@@ -3,12 +3,12 @@ entries:
   helm-chart-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-05-11T13:18:43.024367-04:00"
+    created: "2021-05-11T13:26:12.161336-04:00"
     description: A Helm chart for Kubernetes
-    digest: aeeb54bc907ea613266e8992bbba4c22747326584914ada6af78bddb1a6362b1
+    digest: 90a75f616b2001dc0321cef699f20c0082ac827b6f5e5180fc609a06f85e2079
     name: helm-chart-test
     type: application
     urls:
     - https://rokej.github.io/testrepo/helm-chart-test-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-11T13:18:43.019502-04:00"
+generated: "2021-05-11T13:26:12.160605-04:00"
