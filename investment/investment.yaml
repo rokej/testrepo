@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: investment-app
+  namespace: investment
+data:
+  app: investment-app
