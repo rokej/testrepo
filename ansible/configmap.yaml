@@ -4,4 +4,4 @@ metadata:
   name: configmap-1
   namespace: multins
 data:
-  path: resource999
+  path: resource888
