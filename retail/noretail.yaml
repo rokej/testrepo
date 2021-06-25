@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: retail-banking-app
+  name: no-retail-banking-app
   namespace: retailbanking
 data:
-  app: retail-banking-app
+  app: no-retail-banking-app
