@@ -13,11 +13,11 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sub2-configmap-2
+  name: sub2-configmap-3
   namespace: multins
   annotations:
     test: "123"
   labels:
     test2: "abc"
 data:
-  path: resource2222222
+  path: sssss3333
