@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sub4-configmap
+  name: sub6-configmap
   namespace: default
   annotations:
     test: "123"
@@ -13,7 +13,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sub5-configmap
+  name: sub7-configmap
   namespace: app1
   annotations:
     test: "123"
