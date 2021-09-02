@@ -13,7 +13,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: sub9-configmap
+  name: system:controller:operator-lifecycle-manager
   namespace: app1
   annotations:
     test: "123"
