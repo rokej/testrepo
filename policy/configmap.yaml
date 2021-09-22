@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: perf-configmap
+  namespace: multins
+  annotations:
+    test: "123"
+  labels:
+    test2: "abc"
+data:
+  path: resource44444
