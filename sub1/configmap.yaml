@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: perf-configmap
+  name: perf-configmap-2
   namespace: multins
   annotations:
     test: "123"
