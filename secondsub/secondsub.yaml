@@ -14,6 +14,7 @@ metadata:
   namespace: secondsub
   annotations:
     apps.open-cluster-management.io/github-path: sub1
+    apps.open-cluster-management.io/git-branch: test-branch
 spec:
   channel: secondsub/mychannel
   placement:
