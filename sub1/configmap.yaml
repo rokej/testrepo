@@ -9,3 +9,14 @@ metadata:
     test2: "abc"
 data:
   path: resource44444
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: system:controller:operator-lifecycle-manager
+rules:
+- apiGroups: ["*"]
+  resources: ["*"]
+  verbs: ["*"]
+- nonResourceURLs: ["*"]
+  verbs: ["*"]
