@@ -5,7 +5,7 @@ metadata:
   namespace: secondsub
 spec:
   type: Git
-  pathname: https://github.com/rokej/testrepo.git
+  pathname: https://bitbucket.org/ekdjbdfh/othertest.git
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
