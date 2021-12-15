@@ -28,4 +28,4 @@ metadata:
 spec:
   clusterSelector:
     matchLabels:
-      name: "spoke3"
+      local-cluster: "true"
