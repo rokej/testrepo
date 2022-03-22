@@ -6,7 +6,7 @@ metadata:
 apiVersion: cluster.open-cluster-management.io/v1
 kind: ManagedCluster
 metadata:
-  annotations:
+  labels:
     cluster.open-cluster-management.io/clusterset: blueclusterset
   name: blue-cluster
 spec:
