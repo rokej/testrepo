@@ -4,8 +4,8 @@ metadata:
   name: security-context-demo
 spec:
   securityContext:
-    runAsUser: 1000
-    runAsGroup: 3000
+    runAsUser: {{ .Values.securityContext.runAsUser }}
+    runAsGroup: {{ .Values.securityContext.runAsGroup }}
     fsGroup: 2000
   volumes:
   - name: sec-ctx-vol
