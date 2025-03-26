@@ -35,6 +35,8 @@ metadata:
   annotations:
     apps.open-cluster-management.io/github-branch: main
     apps.open-cluster-management.io/github-path: test/github/multiresource
+  labels:
+    app: app-234
   name: app-234
   namespace: app-234
 spec:
