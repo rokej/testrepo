@@ -27,7 +27,7 @@ metadata:
   namespace: app-1
 spec:
   clusters:
-  - name: spoke2
+  - name: spoke1
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
