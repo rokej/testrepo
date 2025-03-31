@@ -35,6 +35,7 @@ metadata:
   annotations:
     apps.open-cluster-management.io/github-branch: main
     apps.open-cluster-management.io/github-path: test/github/multiresource
+    apps.open-cluster-management.io/skip-hub-validation: 'true'
   labels:
     app: app-399
   name: app-399
