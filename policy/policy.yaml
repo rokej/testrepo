@@ -1,57 +1,73 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: policy-sample-site-du-sriov-network
-  namespace: default
+  name: policy-mce-hcp-autoimport
+  namespace: open-cluster-management-global-set
   annotations:
     policy.open-cluster-management.io/standards: NIST SP 800-53
     policy.open-cluster-management.io/categories: CM Configuration Management
     policy.open-cluster-management.io/controls: CM-2 Baseline Configuration
+    policy.open-cluster-management.io/description: Discovered clusters that are of
+      type MultiClusterEngineHCP can be automatically imported into ACM as managed clusters.
+      This policy configure those discovered clusters so they are automatically imported. 
+      Fine tuning MultiClusterEngineHCP clusters to be automatically imported
+      can be done by configure filters at the configMap or add annotation to the discoverd cluster.
 spec:
-  remediationAction: enforce
+  # Remove the default remediation below to enforce the policies.
+  # remediationAction: inform
   disabled: false
   policy-templates:
     - objectDefinition:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
         metadata:
-          name: policy-sample-site-du-sriov-network-namespace
+          name: mce-hcp-autoimport-config
         spec:
-          remediationAction: enforce # the policy-template spec.remediationAction is overridden by the preceding parameter value for spec.remediationAction.
-          severity: low
-          namespaceSelector:
-            exclude: ["kube-*"]
-            include: ["*"]
-          object-templates:
-            - complianceType: musthave
-              objectDefinition:
-                apiVersion: v1
-                kind: Namespace
-                metadata:
-                    name: mh-net-ns-site-1-fqdn-worker1
-    - objectDefinition:
-        apiVersion: policy.open-cluster-management.io/v1
-        kind: ConfigurationPolicy
-        metadata:
-          name: policy-sample-site-du-sriov-network
-        spec:
-          remediationAction: enforce # the policy-template spec.remediationAction is overridden by the preceding parameter value for spec.remediationAction.
-          severity: low
-          namespaceSelector:
-            exclude: ["kube-*"]
-            include: ["*"]
           object-templates:
             - complianceType: musthave
               objectDefinition:
                 apiVersion: v1
                 kind: ConfigMap
                 metadata:
-                  name: mh-net-u-site-1-fqdn-worker1
-                  namespace: mh-net-ns-site-1-fqdn-worker1
-                spec:
-                  ipam:  |
-                    {
-                    }
-                  networkNamespace: mh-net-ns-site-1-fqdn-worker1
-                  resourceName: mh_u_site_1_fqdn_worker1
-                  vlan: 100
+                  name: discovery-config
+                  namespace: open-cluster-management-global-set
+                data:
+                  rosa-filter: ""
+          remediationAction: enforce
+          severity: low
+---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  name: policy-mce-hcp-autoimport-placement
+  namespace: open-cluster-management-global-set
+spec:
+  tolerations:
+    - key: cluster.open-cluster-management.io/unreachable
+      operator: Exists
+    - key: cluster.open-cluster-management.io/unavailable
+      operator: Exists
+  clusterSets:
+    - global
+  predicates:
+    - requiredClusterSelector:
+        labelSelector:
+          matchExpressions:
+            - key: local-cluster
+              operator: In
+              values:
+                - "true"
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: policy-mce-hcp-autoimport-placement-binding
+  namespace: open-cluster-management-global-set
+placementRef:
+  name: policy-mce-hcp-autoimport-placement
+  apiGroup: cluster.open-cluster-management.io
+  kind: Placement
+subjects:
+  - name: policy-mce-hcp-autoimport
+    apiGroup: policy.open-cluster-management.io
+    kind: Policy
