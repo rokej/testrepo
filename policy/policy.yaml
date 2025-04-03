@@ -32,7 +32,7 @@ spec:
                   name: discovery-config
                   namespace: open-cluster-management-global-set
                 data:
-                  rosa-filter: ""
+                  rosa-filter: "ABC"
           remediationAction: enforce
           severity: low
 ---
