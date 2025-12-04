@@ -6,6 +6,8 @@ metadata:
 spec:
   arch: amd64
   clusterName: hcp-kubevirt-git
+  config:
+  - name: worker-ntp-config
   replicas: 2
   management:
     autoRepair: false
